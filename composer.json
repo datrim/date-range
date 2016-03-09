@@ -1,0 +1,28 @@
+{
+    "name": "datrim/date-range",
+    "description": "Date range utility",
+    "license": "MIT",
+  	"keywords": ["date", "range"],
+    "authors": [
+        {
+            "name": "Chris Pritchard",
+            "email": "chris@datrim.co.uk"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+	  "php": ">=5.5.9",
+        "nesbot/carbon": "^1.21"
+	},
+  	"autoload": {
+  		"psr-4": {
+			"Datrim\\DateRange\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"classmap": ["tests/TestCase.php"]
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^5.2"
+	}
+}
