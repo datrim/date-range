@@ -98,7 +98,7 @@ dt::tomorrow($tz = null)
 dt::yesterday($tz = null)
 ```
 
-A different timezone string The default timezone may be passed to all the above methods to override the default timezone.
+A different timezone string may be passed to all the above methods to override the default timezone.
 
 That's it!
 
