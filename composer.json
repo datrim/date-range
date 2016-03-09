@@ -2,7 +2,7 @@
     "name": "datrim/date-range",
     "description": "Date range utility",
     "license": "MIT",
-  	"keywords": ["date", "range"],
+  	"keywords": ["date", "carbon", "date range"],
     "authors": [
         {
             "name": "Chris Pritchard",

@@ -1,6 +1,6 @@
 # DateRange
 
-DateRange is a simple package for creating and using a start and end.
+DateRange is a simple package for creating and using a starting and ending date.
 
 ## Installation
 
@@ -90,11 +90,13 @@ $timezone = dt::defaultTimezone();
 
 The dt class has several static methods that wrap Carbon creation methods:
 
+```php
 dt::now($tz = null)
 dt::parse($time = null, $tz = null)
 dt::today($tz = null)
 dt::tomorrow($tz = null)
 dt::yesterday($tz = null)
+```
 
 A different timezone string The default timezone may be passed to all the above methods to override the default timezone.
 
