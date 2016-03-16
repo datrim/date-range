@@ -58,6 +58,22 @@ use Datrim\DateRange\DateRange;
 $today = DateRange::thisMonth();
 ```
 
+### Create date range for this year
+
+```php
+use Datrim\DateRange\DateRange;
+
+$year = DateRange::thisYear();
+```
+
+### Create date range for a specified year
+
+```php
+use Datrim\DateRange\DateRange;
+
+$year = DateRange::year(2010);
+```
+
 ### Get the difference between two dates
 
 ```php

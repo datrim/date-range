@@ -57,6 +57,18 @@ class DateRange
 			dt::now()->endOfMonth());
 	}
 
+	public static function year($year = null)
+	{
+		$year = $year ?: date('Y');
+		return new static(dt::today()->year($year)->startOfYear(),
+			dt::today()->year($year)->endOfYear());
+	}
+
+	public static function thisYear()
+	{
+		return static::year();
+	}
+
 	public function diff()
 	{
 		return $this->start->diff($this->end);

@@ -102,4 +102,32 @@ class TestCase extends PHPUnit_Framework_TestCase
 
 		$this->assertEquals($berlin, $today->timezoneName);
 	}
+
+	/** @test */
+	function it_stores_the_current_year()
+	{
+		$start = dt::today()->startOfYear();
+		$end = dt::today()->endOfYear();
+
+		$year = DateRange::thisYear();
+
+		var_dump($year);
+
+		$this->assertEquals($start, $year->start);
+		$this->assertEquals($end, $year->end);
+	}
+
+	/** @test */
+	function it_stores_a_specified_year()
+	{
+		$start = dt::today()->year(2010)->startOfYear();
+		$end = dt::today()->year(2010)->endOfYear();
+
+		$year = DateRange::year(2010);
+
+		var_dump($year);
+
+		$this->assertEquals($start, $year->start);
+		$this->assertEquals($end, $year->end);
+	}
 }
