@@ -74,6 +74,15 @@ class DateRange
 		return $this->start->diff($this->end);
 	}
 
+	public function includes(Carbon $dt = null)
+	{
+		if (is_null($dt)) {
+			$dt =  Carbon::now();
+		}
+
+		return ($dt >= $this->start) && ($dt <= $this->end);
+	}
+
 	public function __get($property)
 	{
 		return (property_exists($this, $property))

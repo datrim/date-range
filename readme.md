@@ -83,6 +83,16 @@ $today = DateRange::thisWeek();
 $diff  = $today->diff();
 ```
 
+### Is a date and time included in a date range
+
+```php
+use Datrim\DateRange\DateRange;
+
+$thisWeek = DateRange::thisWeek();
+$today = Carbon::now();
+$included = $thisWeek->includes($today);
+```
+
 ### Also included is a default timezone class.
 
 The timezone class is used by the DateRange when creating new Carbon instances. Before using the DateRange class, set the default timezone as follows:
