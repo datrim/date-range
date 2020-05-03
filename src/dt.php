@@ -8,6 +8,7 @@
 namespace Datrim\DateRange;
 
 use Carbon\Carbon;
+use Carbon\CarbonInterface;
 
 /**
  * Class dt
@@ -74,9 +75,9 @@ class dt
 	/**
 	 * @param null|string $tz
 	 *
-	 * @return Carbon
+	 * @return CarbonInterface
 	 */
-	public static function today($tz = null)
+	public static function today($tz = null) : CarbonInterface
 	{
 		$tz = $tz ?: static::defaultTimezone();
 		return Carbon::today($tz);
@@ -85,9 +86,9 @@ class dt
     /**
      * @param string|null $tz
      *
-     * @return \Carbon\CarbonInterface
+     * @return CarbonInterface
      */
-	public static function tomorrow($tz = null)
+	public static function tomorrow($tz = null) : CarbonInterface
 	{
 		$tz = $tz ?: static::defaultTimezone();
 		return Carbon::tomorrow($tz);
@@ -96,9 +97,9 @@ class dt
     /**
      * @param null|string $tz
      *
-     * @return \Carbon\CarbonInterface
+     * @return CarbonInterface
      */
-	public static function yesterday($tz = null)
+	public static function yesterday($tz = null) : CarbonInterface
 	{
 		$tz = $tz ?: static::defaultTimezone();
 		return Carbon::yesterday($tz);

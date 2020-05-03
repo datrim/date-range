@@ -8,6 +8,7 @@
 namespace Datrim\DateRange;
 
 use Carbon\Carbon;
+use Carbon\CarbonInterface;
 
 /**
  * Class DateRange
@@ -77,7 +78,7 @@ class DateRange
 	public function includes(Carbon $dt = null)
 	{
 		if (is_null($dt)) {
-			$dt =  Carbon::now();
+			$dt = Carbon::now();
 		}
 
 		return ($dt >= $this->start) && ($dt <= $this->end);
