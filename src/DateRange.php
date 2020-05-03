@@ -22,7 +22,7 @@ class DateRange
 	private $start;
 	private $end;
 
-	function __construct(Carbon $start, Carbon $end)
+	function __construct(CarbonInterface $start, CarbonInterface $end)
 	{
 		$this->start = $start;
 		$this->end   = $end;
