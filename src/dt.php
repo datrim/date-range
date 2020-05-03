@@ -82,22 +82,22 @@ class dt
 		return Carbon::today($tz);
 	}
 
-	/**
-	 * @param string|null $tz
-	 *
-	 * @return static
-	 */
+    /**
+     * @param string|null $tz
+     *
+     * @return \Carbon\CarbonInterface
+     */
 	public static function tomorrow($tz = null)
 	{
 		$tz = $tz ?: static::defaultTimezone();
 		return Carbon::tomorrow($tz);
 	}
 
-	/**
-	 * @param null|string $tz
-	 *
-	 * @return static
-	 */
+    /**
+     * @param null|string $tz
+     *
+     * @return \Carbon\CarbonInterface
+     */
 	public static function yesterday($tz = null)
 	{
 		$tz = $tz ?: static::defaultTimezone();
